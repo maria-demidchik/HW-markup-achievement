@@ -8,6 +8,7 @@ html,
 body {
     font-family: 'Rubik', sans-serif;
     font-style: normal;
+    min-width: 376px;
 }
 
 a {
@@ -69,6 +70,10 @@ button:hover {
     gap: 24px;
 }
 
+.menu-icon {
+    display: none;
+}
+
 .menu-link {
     color: #FFF;
     font-size: 12px;
@@ -108,11 +113,13 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 800px;
+    min-height: 800px;
 }
 
 .main-img {
     align-self: flex-end;
+     max-width: 656px;
+     width: 100%;
 }
 
 .rates-section {
@@ -132,6 +139,7 @@ button:hover {
 
 .rates-section .text {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .table {
@@ -299,4 +307,79 @@ small {
     font-weight: 400;
     line-height: 22px;
     color:#FFF;
+}
+
+@media screen and (max-width: 1400px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    .main-info {
+        align-self: flex-start;
+        margin: 100px 0 80px;
+    }
+
+    .main-img {
+        align-self: center;
+    }
+
+    .table {
+        width: 940px;
+    }
+
+    .table-wrapper {
+        overflow: auto;
+        width: 100%;
+        max-width: 940px;
+    }
+
+    .account-wrapper {
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .create-account-section .text {
+        max-width: unset;
+    }
+
+    form {
+        align-self: center;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .main-wrapper {
+        min-height: auto;
+    }
+
+    .main-info {
+        margin: 60px 0;
+    }
+
+    .main-title {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
+    .account-wrapper {
+        gap: 60px;
+    }
+
+    label {
+        white-space: nowrap;
+    }
+
+    fieldset {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
 }
